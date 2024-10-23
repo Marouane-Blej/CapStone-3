@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+    <div class="form-container">
+      <p class="form-text">Complete the form to create your blog</p>
+      <form
+        action="/home"
+        method="post"
+      >
+        <label for="bTitle">Blog Title</label>
+        <input
+          type="text"
+          id="bTitle"
+          name="blogTitle"
+          placeholder="Your Title Here..."
+          required
+        />
+
+        <label for="bDes">Blog description</label>
+        <textarea
+          type="text"
+          id="bDes"
+          name="blogDes"
+          placeholder="Your Blog here..."
+          rows="6"
+          required
+        >
+        </textarea>
+        <input
+          type="submit"
+          value="PUBLISH"
+        />
+      </form>
+    </div>
+  <%- include('partials/footer.ejs') %>

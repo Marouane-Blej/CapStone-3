@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+    <h1>Edit Blog</h1>
+    <!-- Edit form -->
+    <form action="/edit/<%= blogDetails.id %>" method="POST">
+        <div>
+            <label for="blogTitle">Blog Title</label>
+            <input 
+                type="text"
+                id="blogTitle"
+                name="blogTitle"
+                value="<%= blogDetails.title %>"
+                required
+            />
+        </div>
+        <div>
+            <label for="blogDes">Blog Description</label>
+            <textarea
+                id="blogDes"
+                name="blogDes" 
+                rows="10"
+                required>
+            <%= blogDetails.description %>
+            </textarea>
+        </div>
+        <button type="submit">Save Changes</button>
+    </form>
+
+<%- include('partials/footer.ejs') %>
